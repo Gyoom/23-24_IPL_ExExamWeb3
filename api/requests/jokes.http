@@ -1,0 +1,33 @@
+@hostname = localhost
+@port = 3001
+
+@jokeId = 6461f476d9a9da9dbeade34e
+
+@host = http://{{hostname}}:{{port}}
+
+### Get All
+
+GET {{host}}/api/jokes HTTP/1.1
+Accept: application/json
+
+### Get one
+
+GET {{host}}/api/jokes/{{jokeId}} HTTP/1.1
+Accept: application/json
+
+### Delete one
+
+DELETE {{host}}/api/jokes/{{jokeId}} HTTP/1.1
+Accept: application/json
+
+### Post one
+
+POST {{host}}/api/jokes HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "question": "A",
+    "answer": "",
+    "category": ""
+}
